@@ -106,7 +106,7 @@ function ModalEdit(props) {
           );
 
         const res = await axios.put(
-          `http://localhost:5000/api/events/${props.event?.id}`,
+          `http://172.24.41.210/api/events/${props.event?.id}`,
           data
         );
         props.setToast({

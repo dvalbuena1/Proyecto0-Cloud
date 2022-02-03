@@ -81,7 +81,7 @@ export default function Home() {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
       axios
-        .get("http://localhost:5000/api/events", {
+        .get("http://172.24.41.210/api/events", {
           params: { id_user: user.id },
         })
         .then((res) => setEvents(res.data));
@@ -103,7 +103,7 @@ export default function Home() {
   const deleteEvent = async (event) => {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/events/${event.id}`
+        `http://172.24.41.210/api/events/${event.id}`
       );
       setToast({
         open: true,

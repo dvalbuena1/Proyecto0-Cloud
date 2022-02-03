@@ -97,7 +97,7 @@ function ModalNew(props) {
           user: user.id,
         };
 
-        const res = await axios.post("http://localhost:5000/api/events", data);
+        const res = await axios.post("http://172.24.41.210/api/events", data);
         props.setToast({
           open: true,
           severity: "success",

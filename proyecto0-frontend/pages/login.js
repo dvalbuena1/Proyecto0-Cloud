@@ -76,7 +76,7 @@ function Login() {
     if (values.email && values.password) {
       if (page === "login") {
         try {
-          const res = await axios.post("http://localhost:5000/api/login", {
+          const res = await axios.post("http://172.24.41.210/api/login", {
             email: values.email,
             password: values.password,
           });
@@ -96,7 +96,7 @@ function Login() {
         }
       } else {
         try {
-          const res = await axios.post("http://localhost:5000/api/user", {
+          const res = await axios.post("http://172.24.41.210/api/user", {
             email: values.email,
             password: values.password,
           });
